@@ -1,4 +1,4 @@
-package com.jpl;
+package com.threadedu;
 
 class SimpeleThread extends Thread{
 
