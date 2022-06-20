@@ -31,4 +31,33 @@ public class IntQueue {
         }
     }
 
+    // 큐에 데이터르 인큐
+    public int enque(int x) throws OverflowIntStackException{
+        if(num >= max){
+            throw new OverflowIntStackException();
+        }
+
+        que[rear++] = x;
+        num++;
+        if(rear == max ){
+            rear = 0;
+        }
+
+        return x;
+    }
+
+    // 큐에서 데이터를 디큐
+    public int deque() throws EmptyIntStackException{
+        if(num <= 0){
+            throw new EmptyIntStackException();
+        }
+        int x = que[front++];
+        num--;
+        if(front == max){
+            front = 0;
+        }
+
+        return x;
+    }
+
 }
