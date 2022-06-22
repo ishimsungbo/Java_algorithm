@@ -61,6 +61,12 @@ public class IndexFiles {
         }
     }
 
+    /**
+     * 실행 옵션
+     * @param args
+     * -docs input\ -index index\
+     */
+
     public static void main(String[] args) {
 
         String indexPath = "index";
@@ -71,7 +77,7 @@ public class IndexFiles {
             if("-index".equals(args[i])){
                 indexPath = args[i+1];
                 i++;
-            }else if("-doc".equals(args[i])){
+            }else if("-docs".equals(args[i])){
                 docsPath = args[i+1];
                 i++;
             }else if ("-update".equals(args[i])) {
@@ -82,6 +88,7 @@ public class IndexFiles {
         final Path docDir = Paths.get(docsPath);
 
         Date start = new Date();
+
         try {
             System.out.println("Indexing to directory ' "+indexPath+" '...");
 
