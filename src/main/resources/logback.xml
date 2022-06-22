@@ -5,6 +5,7 @@
             <Pattern>%d{HH:mm} %-5level %logger{36} - %msg%n</Pattern>
         </encoder>
     </appender>
+
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>./application_log/application.log</file>
         <!-- <file>/application_log/application.log</file>  해버리면 C 밑에 생성되버린다.-->
@@ -25,8 +26,12 @@
     <logger name="com" level="info"/>
     <logger name="com" level="debug"/>
 
-    <root level="debug">
-        <appender-ref ref="CONSOLE"/>
-        <appender-ref ref="FILE" />
+    <root level="info">
+        <appender-ref ref="CONSOLE" />
     </root>
+    <!--
+    <root level="debug">
+          <appender-ref ref="FILE" />
+    </root>
+    -->
 </configuration>

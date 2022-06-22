@@ -9,7 +9,8 @@ public class Slf4jTest {
 
     public static void main(String[] args) {
         for(int i =0 ; i < 10000 ;i++){
-            logger.debug("로그 ======================" + i);
+            //logger.debug("로그 ======================" + i);
+            logger.info("로그 ======================" + i);
         }
 
 
