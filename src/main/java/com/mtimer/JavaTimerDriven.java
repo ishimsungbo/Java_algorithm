@@ -10,7 +10,7 @@ import java.util.TimerTask;
 import static java.lang.Thread.sleep;
 
 /**
- * 자바 타이머에 대해 알아본다.
+ * 자바 타이머에 대해 알아본다..
  * 1. 일정 시간이 지난 뒤에 실행
  * 2. 정해진 시간에 실행
  * 3. 주기적으로 실행
