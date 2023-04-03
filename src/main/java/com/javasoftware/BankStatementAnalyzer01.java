@@ -8,17 +8,20 @@ import java.time.Month;
 import java.util.List;
 
 // 2-8 BankStatementAnalyzer 클래스를 이용해 입출금 내역 목록 처리
-public class BankStatementAnalyzer {
-
+public class BankStatementAnalyzer01 {
+    /*
     private static final String RESOURCES = "D:\\worskpace\\Java_algorithm\\src\\main\\resources\\ex.csv";
 
-    public void analyze(String filePathName, BankStatementParser parser) throws IOException{
+    public static void main(String[] args) throws IOException {
+        final BankStatementCSVParser bankStatementCSVParser = new BankStatementCSVParser();
+
         final Path path = Paths.get(RESOURCES);
         final List<String> lines = Files.readAllLines(path);
-        final List<BankTransaction> bankTransactions = parser.parserLinesFrom(lines);
 
+        final List<BankTransaction> bankTransactions = bankStatementCSVParser.parseLinesFromCSV(lines);
+
+        //응집도 파트 적용 시작 부분
         final BankStatementProcessor processor = new BankStatementProcessor(bankTransactions);
-
         collectSummary(processor);
     }
 
@@ -28,4 +31,5 @@ public class BankStatementAnalyzer {
         System.out.println("총 2월 발생 금액 : " + bankStatementProcessor.calculateTotalMonth(Month.FEBRUARY));
         System.out.println("총 받은(salary 카테고리) 금액 : " + bankStatementProcessor.calculateTotalForCategory("Salary"));
     }
+     */
 }

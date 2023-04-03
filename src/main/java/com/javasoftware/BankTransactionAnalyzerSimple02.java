@@ -22,7 +22,7 @@ public class BankTransactionAnalyzerSimple02 {
         final Path path = Paths.get(RESOURCES);
         final List<String> lines = Files.readAllLines(path);
 
-        final List<BankTransaction> bankTransactions = bankStatementCSVParser.parseLinesFromCSV(lines);
+        final List<BankTransaction> bankTransactions = bankStatementCSVParser.parserLinesFrom(lines);
 
         System.out.println("모든 지출 내역의 합 : " + calculateTotalAmount(bankTransactions));
         System.out.println("1월 의 지출 내역  : "+ selectInMonth(bankTransactions,Month.JANUARY));
